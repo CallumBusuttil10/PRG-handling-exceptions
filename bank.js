@@ -34,13 +34,14 @@ class BankAccount {
     }
   }
   
-  function handleTransactions() {
-    let myAccount = new BankAccount(101, "Steve Rich", 500);
-    let friendAccount = new BankAccount(102, "Bessie Owens", 300);
+let myAccount = new BankAccount(101, "Steve Rich", 500);
+let friendAccount = new BankAccount(102, "Bessie Owens", 300);
   
+function handleTransactions() {
     try {
         myAccount.deposit(200);
-        myAccount.transfer(friendAccount, 1500);  // This should fail
+        //myAccount.withdraw(800);
+        //myAccount.transfer(friendAccount, 1500);  // This should fail
     } catch (error) {
         console.error(`Operation failed: ${error.message}`);
     }
@@ -50,4 +51,7 @@ class BankAccount {
   }
   
   handleTransactions();
+  myAccount.withdraw(800)
+
+
   //
